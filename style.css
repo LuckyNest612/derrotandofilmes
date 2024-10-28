@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #f5f5f5; /* Texto claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin: 10px 0;
+    background-color: ; /* Laranja da logo */
+    padding: 3px;
+}
+
+#videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-item {
+    position: relative;
+    width: 250px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: #1c1c1c; /* Cor de fundo dos itens */
+}
+
+.video-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.video-item:hover img {
+    transform: scale(1.1);
+}
+
+.video-item h3 {
+    background-color: rgba(255, 111, 0, 0.7); /* Laranja translúcido */
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: white; /* Texto do título em branco */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo do modal */
+}
+.modal-content {
+    position: relative;
+    margin: auto;
+    width: 80%; /* Aumenta a largura do vídeo */
+    max-width: 800px; /* Define um máximo para a largura */
+    height: auto; /* Permite que a altura ajuste automaticamente */
+    display: flex; /* Habilita o uso do flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.modal iframe {
+    width: 100%; /* O vídeo ocupará toda a largura do modal */
+    height: 450px; /* Define uma altura fixa para o vídeo */
+}
+
+.logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 20px;
+}
